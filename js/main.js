@@ -1,15 +1,18 @@
-
 window.onload = init;
 function init() {
-	var images = document.getElementsByTagName("img");
-	for (var i = 0; i < images.length; i++) {
-		images[i].onclick = showAnswer;
-	}
-};
+	var map = document.getElementById("map");
 
-function showAnswer(eventObj) {
-	var image = eventObj.target;
-	var name = image.id;
-	name = name + ".jpg";
-	image.src = name;
 }
+
+function showCoords(eventObj) {
+	var coords = document.getElementById("coords");
+
+
+	coords.innerHTML = "Map coordinates: " + x + ", " + y;
+}
+
+//setTimeout
+function timeHandler() {
+	alert("HEY! What are you doing? Just gonna stare at a THE SCREEN?! MOVE MOUSE");
+}
+setTimeout(timeHandler, 5000)//in milliseconds
